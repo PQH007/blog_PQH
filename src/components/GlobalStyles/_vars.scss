@@ -1,0 +1,110 @@
+:root {
+    --body-light: #f9f9f9;
+    --body-dark: #00193b;
+    --widget-light: #ffffff;
+    --widget-dark: #031123;
+    --header-light: #00193b;
+    --header-dark: #d8e9ff;
+    --text-light: #515c6b;
+    --text-dark: #e2e1e1;
+    --accent-light: #035ecf;
+    --accent-dark: #4f89fc;
+    --highlight-dark: #273241;
+    --input-border-light: #e2e1e1;
+    --input-border-dark: #354585;
+    --border-light: #f1f1f1;
+    --border-dark: rgba(53, 69, 133, 0.4);
+    --gray: #8d8d99;
+    --label: #6e757f;
+    --red: #ff5470;
+    --green: #00ba9d;
+    --yellow: #f8d518;
+    --orange: #ff6900;
+    --shadow-light: 0px 3px 14px rgba(226, 225, 225, 0.75);
+    --shadow-dark: 0px 3px 14px #00285d;
+    --shadow-glass: inset 1px 1px 2px #ffffff, inset -2px -2px 2px #003a31;
+    --radial-blue: radial-gradient(59.32% 59.32% at 50% 31.83%, rgba(62, 128, 211, 0.77) 0%, rgba(1, 40, 90, 0.77) 100%),
+      #00193b;
+    --linear-sky: linear-gradient(44deg, rgba(190, 250, 241, 0.13) 0%, rgba(3, 94, 207, 0.2) 100%), #fff;
+    --linear-blue: linear-gradient(50.81deg, #00214d 6.78%, #3e80d3 65.48%, #01285a 101.42%);
+    --linear-sm-light: linear-gradient(177deg, #00193b 0%, #035ecf 100%);
+    --linear-sm-dark: linear-gradient(177deg, #5fa3ff 0%, #035ecf 100%);
+    --glass: linear-gradient(134.73deg, rgba(1, 88, 83, 0.0001) 32.33%, rgba(0, 112, 117, 0.186708) 79.27%);
+    --body-font: 'Archivo', sans-serif;
+    --heading-font: 'Archivo SemiExpanded', sans-serif;
+    --segoe-ui-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --transition: 0.3s ease-in-out;
+    --element-height: 44px;
+    --app-height: 100%;
+  
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  
+    --btn-primary: #0d6efd; // 0d6efd
+    --btn-primary-hover: #0b5ed7; // 0b5ed7
+  
+    --btn-primary-v2: #6691e7; // 0d6efd
+    --btn-primary-hover-v2: #577bc4; // 0b5ed7
+  
+    --btn-secondary: #6c757d;
+    --btn-secondary-hover: #545b62;
+  
+    --btn-success: #13c56b;
+    --btn-success-hover: #10a75b;
+  
+    --btn-info: #50c3e6;
+    --btn-info-hover: #44a6c4;
+  
+    --btn-warning: #e8bc52; // d5ac49
+    --btn-warning-hover: #c5a046;
+  
+    --btn-warning-v2: #d5ac49; // d5ac49
+    --btn-warning-hover-v2: #c5a046;
+  
+    --btn-danger: #dc3545;
+    --btn-danger-hover: #bd2130;
+  
+    --btn-light: #f3f6f9;
+    --btn-light-hover: #ced4da;
+  
+    --btn-sdark: #4f484f;
+    --btn-sdark-hover: #746974;
+  
+    --btn-delay: #ff8091;
+  
+    --btn-violet: #865ce2;
+    --btn-violet-hover: #724ec0;
+  }
+  
+  /* Độ phân giải từ 2K trở lên (≥ 2560px) */
+  @media screen and (min-width: 2560px) {
+    :root {
+      font-size: 22.3px !important;
+    }
+  }
+
+  
