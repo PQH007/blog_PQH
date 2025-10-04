@@ -3,14 +3,23 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
   background-color: #f3f6f9;
   font-family: "Segoe UI";
-  font-size: 13.2px;
-  margin: 0;
-  padding: 0;
+  font-size: var(--text-sm);
   overflow: hidden;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: var(--text-xl);
+}
+
+span {
+  color: #45556c;
 }
