@@ -33,6 +33,21 @@
       align-items: center;
     }
   }
+  .container_user {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .image_avatar-user {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background-color: transparent;
+    }
+  }
 }
 
 .content_menu-drawer {
@@ -71,4 +86,49 @@
 .ant-drawer .ant-drawer-content {
   border-radius: 0 0.75rem 32px 0;
   box-shadow: unset;
+}
+
+.container_dropDown_user {
+  display: flex;
+  flex-direction: column;
+  .container_user {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+
+    .ant-image {
+      display: flex;
+      align-items: center;
+    }
+    .image_avatar-user {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background-color: transparent;
+    }
+    .content_info-user {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .info_name-user {
+        font-weight: 600;
+        font-size: var(--text-md);
+        color: #1f2328;
+      }
+      .info_email-user {
+        font-size: var(--text-sm);
+        color: #45556c;
+      }
+    }
+  }
+}
+
+.item_dropDown {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
