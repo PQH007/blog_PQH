@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Drawer } from "antd";
 import { Link } from "react-router-dom";
-import { HomeIcon, CpuIcon, CopilotIcon } from "@primer/octicons-react";
+import { HomeIcon, CpuIcon, CopilotIcon, FileMediaIcon } from "@primer/octicons-react";
 
 const Menu = ({ openDrawer, setOpenDrawer }) => {
     const [items] = useState([
@@ -19,6 +19,11 @@ const Menu = ({ openDrawer, setOpenDrawer }) => {
             label: <Link to="/register">Register</Link>,
             key: "register",
             icon: <CopilotIcon size={16} color="#59636e" />
+        },
+        {
+            label: <Link to="/album">Album</Link>,
+            key: "album",
+            icon: <FileMediaIcon size={16} color="#59636e" />
         },
     ]);
 
