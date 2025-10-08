@@ -156,3 +156,28 @@
     flex-direction: column;
   }
 }
+
+.container_card-extra {
+  display: flex;
+  margin-bottom: 16px;
+  .content_title_card-extra {
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: var(--text-xl);
+      font-weight: 600;
+      color: #1f2328;
+    }
+    .desc_card-extra {
+      font-size: var(--text-sm);
+      color: #57606a;
+      margin-top: 4px;
+    }
+  }
+  .content_children_card-extra {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
