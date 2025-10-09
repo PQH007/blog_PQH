@@ -1,0 +1,69 @@
+.container_card_column {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0.25rem * 4;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.625rem;
+  gap: 8px;
+  cursor: pointer;
+  padding-top: 0.25rem * 8;
+
+  .content_card {
+    grid-column: span 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .item_card {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      .name_card_column {
+        font-weight: 600;
+        font-size: 14px;
+        color: #155dfc;
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .desc_card_column {
+        font-size: var(--text-sm);
+        color: #45556c;
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .date_card_column {
+        font-size: var(--text-sm);
+        color: #45556c;
+        font-family: "Lora";
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .content_thumbnail {
+    grid-column: span 1 / span 1;
+    height: 70px;
+    overflow: hidden; /* cắt phần thừa ảnh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+}
+
+.container_card_column.active {
+  background-color: #eff6ff;
+  border-color: #2b7fff;
+}

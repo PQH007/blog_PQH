@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CardExtra from "../../components/common/cardExtra/CardExtra";
-import { Button, Col, Row, Tooltip } from "antd";
+import { Button } from "antd";
 import { TrashIcon } from "@primer/octicons-react";
 import { useNavigate } from "react-router-dom";
 import './albumStyle.scss'
@@ -12,12 +12,13 @@ const Albums = () => {
         title: 'Albums Management',
         desc: 'Quản lý album ảnh của bạn ở đây',
         children: [
-            <Tooltip title="Lịch sử xoá">
-                <Button
-                    onClick={() => navigate('/albums/list-delete')}
-                    style={{ border: 'none', padding: 0 }}
-                ><TrashIcon size={24} color="#59636e" /></Button>
-            </Tooltip>
+            <Button
+                onClick={() => navigate('/albums/list-delete')}
+                className="btn_type_link"
+            >
+                <TrashIcon size={16} color="#0a0a0a" />
+                <span>Danh sách đã xoá</span>
+            </Button>
         ]
     })
     return (

@@ -32,3 +32,17 @@ span {
   height: 100%;
   width: 100%;
 }
+
+.btn_type_link {
+  border-color: #0000001a;
+  span {
+    font-weight: 600;
+    color: #0a0a0a;
+    font-size: 12.25px;
+  }
+}
+
+.btn_type_link:hover {
+  border-color: #0000001a !important;
+  background-color: #e9ebef !important;
+}
