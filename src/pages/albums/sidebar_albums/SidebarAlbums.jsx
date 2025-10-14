@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import '../albumStyle.scss'
 import { Button, Input } from "antd";
 import { SearchIcon, RepoIcon } from "@primer/octicons-react";
-import Card_cus from "../../../components/common/card/Card_cus";
 import ram from '../../../assets/images/dev/ram.jpg'
 import CardColumn from "../../../components/common/cardColumn/cardColumn";
 

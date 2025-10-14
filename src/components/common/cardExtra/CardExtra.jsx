@@ -1,11 +1,13 @@
 import React from "react";
 
-const CardExtra = ({ dataCardExtra }) => {
+const CardExtra = ({ dataCardExtra, noneDesc }) => {
     return (
         <div className="container_card-extra">
             <div className="content_title_card-extra">
                 <h3 className="title">{dataCardExtra?.title}</h3>
-                <p className="desc_card-extra">{dataCardExtra?.desc}</p>
+                {
+                    noneDesc ? ("") : (<p className="desc_card-extra">{dataCardExtra?.desc}</p>)
+                }
             </div>
             <div className="content_children_card-extra">
                 {
