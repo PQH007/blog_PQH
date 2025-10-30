@@ -58,21 +58,26 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 8px;
       .item_image {
-        aspect-ratio: 1 / 1;
         width: 100%;
         background-color: #eee;
         border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        img {
+        .ant-image {
+          aspect-ratio: 1 / 1;
           width: 100%;
-          height: 100%;
+          background-color: #eee;
           border-radius: 8px;
-        }
-        .ant-image-mask {
-          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+          }
+          .ant-image-mask {
+            border-radius: 8px;
+          }
         }
       }
       .upload_image {

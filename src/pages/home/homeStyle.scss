@@ -1,1 +1,29 @@
 @forward "../../components/GlobalStyles/vars";
+
+.container_homePage {
+  height: 2000px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  .container_daily {
+    grid-template-rows: repeat(3, 1fr);
+    display: grid;
+    height: 900px;
+    gap: 16px;
+    .box {
+      border: 1px solid #e2e8f0;
+      grid-column: span 1;
+      grid-row: span 1;
+      box-shadow: var(--box-shadow-md);
+      padding: 0.25rem * 4;
+      border-radius: calc(0.625rem + 4px);
+    }
+  }
+  .container_workList {
+    grid-column: span 2 / span 2;
+    border: 1px solid #e2e8f0;
+    box-shadow: var(--box-shadow-md);
+    padding: 0.25rem * 4;
+    border-radius: calc(0.625rem + 4px);
+  }
+}
