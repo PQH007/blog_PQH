@@ -3,8 +3,7 @@ import './homeStyle.scss';
 import ram from '../../assets/images/dev/ram.jpg'
 import Submenu from '../../components/common/submenu/Submenu';
 import CardExtra from '../../components/common/cardExtra/CardExtra';
-import { TrashIcon, FileDirectorySymlinkIcon } from "@primer/octicons-react";
-import { Button, Image } from 'antd';
+import Calendar from '../../components/common/calendar/Calendar';
 const Home = () => {
 
     const [dataCard, setDataCard] = useState([
@@ -47,6 +46,40 @@ const Home = () => {
         title: 'Extra Card Title',
         desc: 'This is a description for the extra card.',
     })
+
+    const now = new Date();
+
+    const [currentDate, setCurrentDate] = useState(now);
+
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth();
+
+    const handlePrevMonth = () => {
+        // Tạo một Date mới và lùi lại 1 tháng
+        setCurrentDate(prevDate => {
+            const newDate = new Date(prevDate.getFullYear(), prevDate.getMonth() - 1, 1);
+            return newDate;
+        });
+    };
+
+    const handleNextMonth = () => {
+        // Tạo một Date mới và tiến lên 1 tháng
+        setCurrentDate(prevDate => {
+            const newDate = new Date(prevDate.getFullYear(), prevDate.getMonth() + 1, 1);
+            return newDate;
+        });
+    };
+
+    const formatMonthValue = (date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        return `${year}-${month}`;
+    };
+
+    const handleChange = (e) => {
+        const [year, month] = e.target.value.split("-");
+        setCurrentDate(new Date(year, month - 1, 1));
+    };
     return (
         <>
             <Submenu dataSubmenu={dataSubmenu} />
@@ -54,10 +87,14 @@ const Home = () => {
             <div className='container_homePage'>
                 <div className='container_daily'>
                     <div className='box'>
-                        <span>Lịch</span>
-                        <br />
-                        <span>Thêm ngày, loại ngày, vòng lặp</span>
-                        <span></span>
+                        <Calendar
+                            currentYear={currentYear}
+                            currentMonth={currentMonth}
+                            onPrevMonth={handlePrevMonth}
+                            onNextMonth={handleNextMonth}
+                            currentDate={formatMonthValue(currentDate)}
+                            handleChange={handleChange}
+                        />
                     </div>
                     <div className='box'>
                         <span>Mỗi ngày</span>
@@ -75,7 +112,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='container_workList'>
-                    
+
                 </div>
             </div>
         </>

@@ -32,5 +32,15 @@ export const statusConfig = {
             text: "Tuyên ngôn",
             emoji: '1F4E2',
         }
-    }
+    },
+    TYPE_COLORS: {
+        work: '#ef5350',
+        personal: '#66bb6a',
+        birthday: '#ffb300',
+        wedding: '#9c27b0',
+        holiday: '#03a9f4',
+        fitness: '#ff7043',
+        multiple: '#26a69a'
+    },
+    WEEKDAYS: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"]
 }

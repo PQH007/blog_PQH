@@ -1,0 +1,251 @@
+/* Calendar.css */
+.calendar-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 600px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 8px;
+  #datePickerMonth {
+    width: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow-sd);
+  }
+}
+
+.header h2 {
+  color: #007bff;
+  font-size: 1.5em;
+}
+
+.header button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 4px 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.header button:hover {
+  background-color: #0056b3;
+}
+
+.weekdays,
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.weekdays span {
+  font-weight: bold;
+  padding: 8px 0;
+  color: #6c757d;
+}
+
+.day {
+  height: 40px; /* Chiều cao cố định cho ô ngày */
+  border: 1px solid #eee;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  transition: background-color 0.1s;
+  align-items: center;
+}
+
+.day:hover:not(.empty) {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.day-number {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.empty {
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  visibility: hidden;
+}
+
+/* Đánh dấu ngày hiện tại (Hôm nay) */
+.today {
+  background-color: #e0f7fa;
+  border: 2px solid #00bcd4;
+  border-radius: 4px;
+}
+
+/* Ngày có sự kiện */
+.has-event {
+  background-color: #fffde7;
+}
+
+.event-icon {
+  font-size: 1.5em;
+  margin-top: 5px;
+  cursor: help; /* Gợi ý rằng có thông tin thêm (dùng title attribute) */
+}
+
+/* Tuỳ chỉnh màu sắc icon theo loại sự kiện nếu cần */
+.event-icon.wedding {
+  color: #e91e63;
+}
+.event-icon.birthday {
+  color: #ff9800;
+}
+
+/* Đánh dấu công việc (Event Marker) */
+.event-marker {
+  width: 60%;
+  height: 3px;
+  border-radius: 3px;
+  /* Màu nền được truyền bằng style inline từ JS */
+}
+
+/* --- Modal Styles --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #007bff;
+  padding-bottom: 10px;
+}
+
+.modal-header {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    border-radius: 50%;
+    padding: 10px;
+  }
+}
+
+.modal-close-button {
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.event-type-color {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.event-details {
+  width: 100%;
+  .details-header {
+    display: flex;
+    gap: 8px;
+    .action-details-header {
+      display: flex;
+      gap: 8px;
+      button:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+      button {
+        border: none;
+        background-color: transparent;
+        transition: transform 0.25s ease;
+      }
+      button:focus-visible {
+        outline: none;
+      }
+    }
+  }
+}
+
+.event-details strong {
+  display: block;
+  color: #333;
+}
+
+.event-details p {
+  margin: 3px 0 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.day {
+  span {
+    margin: 0;
+  }
+}
+
+.ant-popconfirm-buttons {
+  .ant-btn-color-primary {
+    span {
+      color: #fff;
+    }
+  }
+}
+
+.repeat-popconfirm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 200px;
+}

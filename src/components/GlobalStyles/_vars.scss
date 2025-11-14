@@ -8,4 +8,5 @@
   --box-shadow-input: 0 0 #0000, 0 0 #0000, 0 0 #0000,
     0 0 0 calc(3px + 0px) color-mix(in oklab, oklch(0.708 0 0) 50%, transparent),
     0 0 #0000;
+  --box-shadow-sd: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
